@@ -57,4 +57,5 @@ RUN bash -c "source $HOME/.nvm/nvm.sh && npm install -g pnpm@6.34.0" 2>&1
 RUN curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-389.0.0-linux-x86_64.tar.gz \
 	&& tar -xf google-cloud-cli-389.0.0-linux-x86_64.tar.gz \
 	&& ./google-cloud-sdk/install.sh --quiet --usage-reporting=false --path-update=true --rc-path /home/gitpod/.bashrc \
-    && ./google-cloud-sdk/bin/gcloud components update --quiet
+    && ./google-cloud-sdk/bin/gcloud components update --quiet \
+    && ./google-cloud-sdk/bin/gcloud components install beta --quiet
