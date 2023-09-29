@@ -44,7 +44,7 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install ansible
 RUN sudo apt-get update && export DEBIAN_FRONTEND=noninteractive \
 	&& sudo apt-get -y install --no-install-recommends graphicsmagick rsync
 
-RUN bash -c 'VERSION="14.20.0" \
+RUN bash -c 'VERSION="18.18.0" \
     && source $HOME/.nvm/nvm.sh && nvm install $VERSION \
     && nvm use $VERSION && nvm alias default $VERSION'
 
